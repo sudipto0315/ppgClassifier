@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def visualize(segId):
+def visualize(segId, df, parsedSignals, processor):
     raw=parsedSignals[segId]
     filt=processor.bandpassFilter(raw)
     label=df[df['id']==segId]['label'].values[0]
